@@ -122,7 +122,6 @@ def main():
 
     letter_writer(player_list, guardian_list)
 
-main()
 
 
 
