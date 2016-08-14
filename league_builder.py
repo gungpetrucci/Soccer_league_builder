@@ -85,7 +85,7 @@ def random_insert_newbie_player(player):
 #open file is 'w' and generate file name of player's name, write the letter and save&close.
 def letter_writer(player_list, guardian_list):
     for player in player_list:
-        with open("letter_to_" + str(player) +"_guardian.txt", 'w') as letter:
+        with open(str(player).replace(' ','_') + ".txt", 'w') as letter:
             letter.write('Dear {},'.format(guardian_list[player_list.index(player)]))
             letter.write('\n\n')
             if player in dragons_member:
@@ -123,6 +123,6 @@ def main():
     letter_writer(player_list, guardian_list)
 
 
-
+main()
 
 
