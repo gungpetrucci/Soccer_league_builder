@@ -107,10 +107,10 @@ def letter_writer(player_list, guardian_list):
             
 
 
-#main script from here:
-def main():
+
+if __name__ == '__main__':
     csv_to_list()
-    global player_list
+    player_list
     for player in player_list:
         if player[2] == 'YES':
             random_insert_exp_player(player)
@@ -121,8 +121,4 @@ def main():
     guardian_list = dragons_guardian + sharks_guardian + raptors_guardian
 
     letter_writer(player_list, guardian_list)
-
-if __name__ == '__main__':
-    main()
-
 
